@@ -5,38 +5,49 @@
 
 ## Introduction:
 
-OpenMLX is a way to setup everything from minilibx more faster.
+OpenMLX is an extension of the minilibx graphics library that let you set up  more faster.
 
-You want a window with a specified size and a special initial color ?
-You can do it in 3 lines.
+### Why the name OpenMLX?
+Because some graphics features come from OpenGL or be inspired from this and this extension work only with minilibx.
 
-You want to change the purge color ?
-Call one "if (lx)" and a specified function.
-
-Adding a external image or build directly a image into the software ?
-Just call register_img(char *path) or create_img(t_ui ui, void (*func)(), char *name).
-
-Want to draw a polygon or a other form quickly filled or in FDF mode ?
-You can use vertex / vertices to render what you want!
-
-This project is still a *WIP* (Work in progress)
+### Warning
+This project is still a **WIP** (Work in progress), some bugs can still occur and i will correct all of them when i can.
+If you see a major bug or a minor bug you can still report it the only thing that i ask you before report it is to be sure the problem is not your functions.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/NyTekCFW/NyTekCFW/master/assets/line.png)
 
 ## Its Authorized ?
 
-Yes, all codes respect 42 norm, and the function used is the functions authorized in graphics projets,
-the only thing that u have to change is the render method, like if you are on the so long project you
-cannot use put_pixels function but you can use the rebuild method you have to specify by adding #define SO_LONG_PROJECT 1 to use the right render method (or you can remove the whole part that contain the original put_pixel function).
+Yes, all codes respect 42 norm.
+The functions used is in the list of functions authorized in graphics projects.
 
-And yes, you can have a function that contain put_pixel at the moment the function is not called.
+### How to bypass So_Long restrictions:
+The statement specifies that the use of the mlx_pixel_put function is prohibited, and that you must use images.
+So how to proceed?
+In OpenMLX, an image management system is available, as well as an alternative to the mlx_pixel_put function. When the window is created, 255 images of 1x1 dimension are generated.
+
+By adding:
+#define SO_LONG_PROJECT 1
+
+you activate the custom version of mlx_pixel_put, which simply displays these 255 previously created images.
+So it simulates the behavior of put_pixel using 1x1 images. In addition, a code makes it possible to recover each pixel of the image to display, then to store this pixel on the generated images. So yes its authorized, since you only display images and not a pixel
+
+Warning! Don't have fun doing the full rendering of your game with it, firstly because it will be terribly long in certain cases and also because it was created in order to display your player without necessarily having to display a ground texture or other in the background . And in the event that your corrector can be understanding about the use of this function for the player, I don't think he will appreciate the fact that it is used everywhere.
+
+And yes, you can have a function that contain mlx_pixel_put as long the function is not called.
+but if you are sceptic you can remove the function that contain mlx_pixel_put.
+
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/NyTekCFW/NyTekCFW/master/assets/line.png)
 
-## Window Usage
+## Introduction To OpenMLX :
 
 *UPCOMING*
 
-## Vertex / Vertices Rendering
+### Window Rendering :
+
+(https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/
+
+## Vertex / Vertices Rendering :
 
 *UPCOMING*
