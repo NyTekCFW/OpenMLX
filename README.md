@@ -5,7 +5,7 @@
 
 ## Introduction:
 
-OpenMLX is an extension of the minilibx graphics library that let you set up  more faster.
+OpenMLX is an extension of the minilibx graphics library that let you setup  more faster.
 
 ### Why the name OpenMLX?
 Because some graphics features come from OpenGL or be inspired from this and this extension work only with minilibx.
