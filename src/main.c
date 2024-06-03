@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 11:05:05 by lchiva            #+#    #+#             */
-/*   Updated: 2024/06/03 17:56:19 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/06/03 19:15:20 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ int	main(void)
 			ml_vertex(&c, (t_vec2){600, 600});
 			ml_setwrap(&c, ML_WRAP_MIRRORED_REPEAT);
 			ml_end(&c);
-			sleep(999);
+			while (1)
+				;
 			lx->quit_window();
 		}
 	}
