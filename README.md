@@ -1,5 +1,5 @@
 # OpenMLX
-☕*(WIP*) OpenMLX a implementation of OpenGL features on 42 minilibx☕
+☕A implementation of OpenGL features on 42 minilibx☕
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/NyTekCFW/NyTekCFW/master/assets/line.png)
 
