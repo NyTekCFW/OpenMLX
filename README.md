@@ -43,12 +43,13 @@ but if you are sceptic you can remove the function that contain mlx_pixel_put.
 ## Introduction To OpenMLX :
 
 ### Basics of OpenMLX :
-*UPCOMING*
-
+[*UPCOMING*]()
+- [🏗️ French: Introduction to OpenMLX] (https://github.com/NyTekCFW/OpenMLX/blob/main/assets/document/fr_openmlx_introduction.pdf)
+- 
 ## Vertex / Vertices Rendering :
 *UPCOMING*
 
-(https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/FDF mode.png)
+(https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/FDF%20mode.png)
 (https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/ML_PRIM_POLYGON.png)
 (https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/ML_PRIM_QUAD_STRIP.png)
 
