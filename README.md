@@ -49,10 +49,10 @@ but if you are sceptic you can remove the function that contain mlx_pixel_put.
 *UPCOMING*
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/FDF%20mode.png" alt="fdf" width="30%">
-<img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/ML_PRIM_POLYGON.png" alt="polygon" width="30%">
-<img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/ML_PRIM_QUAD_STRIP.png" alt="quadstrip" width="30%">
-<img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/filled.png" alt="filled" width="30%">
+<img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/FDF%20mode.png" alt="fdf" width="20%">
+<img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/ML_PRIM_POLYGON.png" alt="polygon" width="20%">
+<img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/ML_PRIM_QUAD_STRIP.png" alt="quadstrip" width="20%">
+<img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/filled.png" alt="filled" width="20%">
 </div>
 
 
