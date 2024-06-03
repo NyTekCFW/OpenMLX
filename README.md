@@ -48,7 +48,9 @@ but if you are sceptic you can remove the function that contain mlx_pixel_put.
 ## Vertex / Vertices Rendering :
 *UPCOMING*
 
-(https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/
+(https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/FDF mode.png)
+(https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/ML_PRIM_POLYGON.png)
+(https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/ML_PRIM_QUAD_STRIP.png)
 
 
 
