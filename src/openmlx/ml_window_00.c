@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 16:40:39 by lchiva            #+#    #+#             */
-/*   Updated: 2024/06/01 12:27:32 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/06/04 11:42:57 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ static void	_ml_set_win_data(t_ml *lx)
 	create_img((t_ui){0, 0, 60, 60, 0xFFFFFF},
 		fill_img_color, "blender_test2");
 	lx->purge_window();
-	printf("%u\n", lx->texture.shaders_count);
 }
 
 int	_ml_create_window(char *title)

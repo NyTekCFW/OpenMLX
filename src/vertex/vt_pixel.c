@@ -6,13 +6,11 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 19:43:35 by lchiva            #+#    #+#             */
-/*   Updated: 2024/06/03 19:15:51 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/06/04 11:46:06 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/openmlx.h"
-
-//#define SO_LONG_PROJECT 1
 
 #ifndef SO_LONG_PROJECT
 
