@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 11:52:54 by lchiva            #+#    #+#             */
-/*   Updated: 2024/06/02 12:37:58 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/06/08 00:05:13 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,10 @@ int	ml_can_draw(t_prim *s, t_vec2 xy)
 		return (0);
 	}
 	return (1);
+}
+
+void	ml_savemesh(t_prim *s, t_shaders *sh)
+{
+	if (sh)
+		s->savemesh = &sh->img;
 }
