@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 13:33:10 by lchiva            #+#    #+#             */
-/*   Updated: 2024/06/08 17:04:40 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/06/08 19:29:53 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,32 +28,50 @@ void	ml_draw_points(t_prim *s)
 		while (p.x < m[1].x)
 		{
 			if (ml_can_draw(s, p))
-				ml_put_pixel(p.x, p.y, s->color);
+			{
+				if (s->savemesh)
+					set_color(s->savemesh,
+						get_px_adr(s->savemesh, p), s->color);
+				else
+					ml_put_pixel(p.x, p.y, s->color);
+			}
 			p.x++;
 		}
 		p.y++;
 	}
 }
 
+static void	lines_input(t_prim *s, t_vec2 data)
+{
+	if (ml_can_draw(s, data))
+	{
+		if (s->savemesh)
+			set_color(s->savemesh, get_px_adr(s->savemesh, data), s->color);
+		else
+			ml_put_pixel(data.x, data.y, s->color);
+	}
+}
+
 static void	lines_render(t_prim *s, double imz[], t_vec2 p[], double d[])
 {
+	t_vec2	data;
+
 	imz[2] = 0;
 	while (imz[2] < imz[1])
 	{
-		if (ml_can_draw(s, (t_vec2){(p[0].x + imz[2]) + imz[0] * d[0],
-				(p[0].y + imz[2]) + imz[0] * d[1]}))
-			ml_put_pixel((p[0].x + imz[2]) + imz[0] * d[0], \
-			(p[0].y + imz[2]) + imz[0] * d[1], s->color);
-		if (ml_can_draw(s, (t_vec2){(p[0].x - imz[2]) + imz[0] * d[0],
-				(p[0].y - imz[2]) + imz[0] * d[1]}))
-			ml_put_pixel((p[0].x - imz[2]) + imz[0] * d[0], \
-			(p[0].y - imz[2]) + imz[0] * d[1], s->color);
+		data = (t_vec2){((p[0].x + imz[2]) + imz[0] * d[0]),
+			((p[0].y + imz[2]) + imz[0] * d[1])};
+		lines_input(s, data);
+		data = (t_vec2){((p[0].x - imz[2]) + imz[0] * d[0]),
+			((p[0].y - imz[2]) + imz[0] * d[1])};
+		lines_input(s, data);
 		imz[2] += 0.01;
 	}
-	if (imz[1] == 0 && ml_can_draw(s, (t_vec2)
-			{(p[0].x + imz[0] * d[0]), (p[0].y + imz[0] * d[1])}))
-		ml_put_pixel(((p[0].x - imz[2]) + imz[0] * d[0]),
-			((p[0].y - imz[2]) + imz[0] * d[1]), s->color);
+	if (!imz[1])
+	{
+		data = (t_vec2){(p[0].x + imz[0] * d[0]), (p[0].y + imz[0] * d[1])};
+		lines_input(s, data);
+	}
 }
 
 void	ml_draw_lines(t_prim *s, int w, int e)
@@ -76,20 +94,4 @@ void	ml_draw_lines(t_prim *s, int w, int e)
 		lines_render(s, imz, p, d);
 		imz[0] += 1.0 / length;
 	}
-}
-
-void	ml_draw_line_sl(t_prim *s)
-{
-	int	i;
-
-	i = 0;
-	while (i < s->cpoint)
-	{
-		if (i + 1 == s->cpoint)
-			break ;
-		ml_draw_lines(s, i, i + 1);
-		i++;
-	}
-	if (s->primitive != ML_PRIM_LINE_STRIP)
-		ml_draw_lines(s, i, 0);
 }
