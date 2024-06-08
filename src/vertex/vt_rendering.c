@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 13:33:10 by lchiva            #+#    #+#             */
-/*   Updated: 2024/06/02 14:21:15 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/06/08 17:04:40 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,10 @@ static void	lines_render(t_prim *s, double imz[], t_vec2 p[], double d[])
 			(p[0].y - imz[2]) + imz[0] * d[1], s->color);
 		imz[2] += 0.01;
 	}
+	if (imz[1] == 0 && ml_can_draw(s, (t_vec2)
+			{(p[0].x + imz[0] * d[0]), (p[0].y + imz[0] * d[1])}))
+		ml_put_pixel(((p[0].x - imz[2]) + imz[0] * d[0]),
+			((p[0].y - imz[2]) + imz[0] * d[1]), s->color);
 }
 
 void	ml_draw_lines(t_prim *s, int w, int e)
@@ -60,6 +64,8 @@ void	ml_draw_lines(t_prim *s, int w, int e)
 	double	imz[3];
 
 	xmemcpy(imz, (double []){0.0, s->size / 2, 0.0}, sizeof(imz));
+	if (s->size == 1)
+		imz[1] = 0;
 	p[0] = (t_vec2){s->point[w].x, s->point[w].y};
 	p[1] = (t_vec2){s->point[e].x, s->point[e].y};
 	d[0] = p[1].x - p[0].x;
