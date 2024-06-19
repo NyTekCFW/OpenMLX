@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 11:05:05 by lchiva            #+#    #+#             */
-/*   Updated: 2024/06/03 19:15:20 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/06/19 17:14:49 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	main(void)
 		if (lx->set_win_size(600, 600) && lx->make_window("OpenMLX Showcase"))
 		{
 			register_img("./textures/rock.xpm");
+			register_img("./textures/fonts/monospace_ttf.xpm");
+			split_image("/monospace_ttf.xpm", "monospace_", 32, 0);
 			c = ml_begin(ML_PRIM_TRIANGLES);
 			ml_settexture(&c, "/rock.xpm");
 			ml_color(&c, 0xff0000);
@@ -34,7 +36,10 @@ int	main(void)
 			ml_vertex(&c, (t_vec2){600, 0});
 			ml_vertex(&c, (t_vec2){600, 600});
 			ml_setwrap(&c, ML_WRAP_MIRRORED_REPEAT);
+			ml_savemesh(&c, get_img("framework"));
 			ml_end(&c);
+			typewritter("OpenMLX ;)", (t_vec2){5, 300});
+			print_img((t_vec2){0, 0}, "framework");
 			while (1)
 				;
 			lx->quit_window();
