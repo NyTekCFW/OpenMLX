@@ -1,0 +1,8 @@
+v1.0.0:
+-Initial Release
+
+v1.1.0:
+-Fix ml_size with lines rendering
+-Added ml_overwrite :
+	-if you use ml_savemesh, u can set ml_overwrite(&s, 1) to make a loop on the image
+	like if a vertex is out of the image at the right the vertex will go at the left of screen.
