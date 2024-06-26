@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 11:05:05 by lchiva            #+#    #+#             */
-/*   Updated: 2024/06/25 23:04:22 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/06/26 20:35:31 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	main(void)
 			ml_vertex(&c, (t_vec2){600, 600});
 			ml_savemesh(&c, get_img("framework"));
 			ml_setmode(&c, ML_MODE_LINE);
-			ml_overwrite(&c, 1);
+			ml_overwrite(&c, 0);
 			ml_size(&c, 8);
 			ml_end(&c);
 			typewritter("OpenMLX ;)", (t_vec2){5, 300});
