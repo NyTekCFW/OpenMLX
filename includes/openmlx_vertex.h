@@ -6,9 +6,12 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 13:23:13 by lchiva            #+#    #+#             */
-/*   Updated: 2024/06/25 19:58:59 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/02 15:37:56 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef OPENMLX_VERTEX_H
+# define OPENMLX_VERTEX_H
 
 typedef struct prim_s
 {
@@ -51,3 +54,6 @@ void	ml_draw_quads(t_prim *s);
 void	ml_draw_quad_strip(t_prim *s);
 void	ml_draw_polygon(t_prim *s);
 int		ml_can_draw(t_prim *s, t_vec2 xy);
+void	create_img_mesh(t_prim *s, char *name);
+
+#endif

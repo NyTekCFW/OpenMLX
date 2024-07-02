@@ -9,3 +9,23 @@ v1.1.0:
 
 v1.1.1
 -Fix ml_overwrite: added a temporary x position to fix ml_overwrite
+
+v1.1.2
+-Optimization of each functions
+-Implemented SMO method (SIMD(Single Instruction Multiple Data) Optimization)
+-Added flag -Wall -Werror -Wextra -O3 to optimize at maximum the code
+-Added flag -march=native to compile with the architecture type of the computer
+-Added xwrite(int fd, const void *data, size_t data_size) : write function with error handler
+	(added to not get any conflict with -O3 flag)
+-Information / explanation of each functions
+-Added a way to take a screenshot of a image and export it
+-Added a way to load a screenshot of a image exported and print it
+-Added a way to track / record an specified image with the possibility
+	to select the number of frame skipped and export it (maximum 4Go)
+-Added a way to play the exported video of the track / record at a
+	specified position on the window
+-Video can be paused or resumed
+
+**Oncoming Update**
+v1.1.3
+-Better organization of structures / prototype functions in .h files

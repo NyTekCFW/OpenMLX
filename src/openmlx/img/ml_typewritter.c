@@ -6,12 +6,15 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 15:58:38 by lchiva            #+#    #+#             */
-/*   Updated: 2024/06/19 17:13:30 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/06/28 18:43:22 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../includes/openmlx.h"
 
+/// @brief get width of character
+/// @param c character
+/// @return 
 static int	font_spacing(char c)
 {
 	if (c >= '0' && c <= '9')
@@ -30,6 +33,10 @@ static int	font_spacing(char c)
 	return (19);
 }
 
+/// @brief get width of a string
+///with font_spacing
+/// @param str string
+/// @return 
 int	r_textwidth(char *str)
 {
 	int	i;
@@ -45,6 +52,7 @@ int	r_textwidth(char *str)
 	return (w);
 }
 
+/// @brief get height of a string
 int	r_textheight(char *str)
 {
 	int	i;
@@ -61,6 +69,10 @@ int	r_textheight(char *str)
 	return (w);
 }
 
+/// @brief write a text into window
+///with monospace_ttf fonts
+/// @param str string
+/// @param v position
 void	typewritter(char *str, t_vec2 v)
 {
 	size_t	i;
@@ -87,15 +99,3 @@ void	typewritter(char *str, t_vec2 v)
 		i++;
 	}
 }
-
-/*
-
-using print image method:
-print_img(v, m);
-v.x += 33;
-
-Using merge image method:
-merge_img(get_img("framework"), get_img(m), v);
-v.x += font_spacing(str[i]);
-
-*/

@@ -6,12 +6,25 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 11:05:05 by lchiva            #+#    #+#             */
-/*   Updated: 2024/06/26 20:35:31 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/02 15:18:48 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/openmlx.h"
 
+void	register_images(void)
+{
+	t_ml	*lx;
+
+	lx = gmlx(ACT_GET);
+	if (lx)
+	{
+		create_img((t_ui){0, 0, lx->width, lx->height, 0}, fill_img_color, "framework");
+		register_img("./textures/rock.xpm");
+		register_img("./textures/fonts/monospace_ttf.xpm");
+		split_image("/monospace_ttf.xpm", "monospace_", 32, 0);
+	}
+}
 //Setup Exemple
 int	main(void)
 {
@@ -24,11 +37,8 @@ int	main(void)
 		lx->purge_color = 0x7f7f7f;
 		if (lx->set_win_size(600, 600) && lx->make_window("OpenMLX Showcase"))
 		{
-			register_img("./textures/rock.xpm");
-			register_img("./textures/fonts/monospace_ttf.xpm");
-			split_image("/monospace_ttf.xpm", "monospace_", 32, 0);
+			register_images();
 			c = ml_begin(ML_PRIM_TRIANGLES);
-			//ml_settexture(&c, "/rock.xpm");
 			ml_color(&c, 0xff0000);
 			ml_setintensity(&c, 0.6);
 			ml_setuv(&c, ML_UV_0);

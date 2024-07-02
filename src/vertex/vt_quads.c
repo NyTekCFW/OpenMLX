@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 08:32:45 by lchiva            #+#    #+#             */
-/*   Updated: 2024/06/26 20:33:33 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/02 03:03:30 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	ml_draw_quads_rendering(t_prim *s, int xinter[], t_vec4 *ijt)
 		{
 			if (s->savemesh)
 			{
-				if (!s->overwrite)
+				if (s->overwrite == 0)
 					ml_overwrite_fix(s, ijt);
 				set_color(s->savemesh, get_px_adr(s->savemesh,
 						(t_vec2){ijt->y, ijt->w}), s->color);
@@ -90,6 +90,9 @@ static void	ml_draw_quads_calc(t_prim *s, int *inter, int y)
 	ml_draw_quads_inter(s, inter, xinter, y);
 }
 
+/// @brief render function for
+///quads primitive
+/// @param s current primitive
 void	ml_draw_quads(t_prim *s)
 {
 	int		i;
