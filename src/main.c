@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 11:05:05 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/02 15:18:48 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/07 22:13:57 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,13 @@ void	register_images(void)
 	lx = gmlx(ACT_GET);
 	if (lx)
 	{
-		create_img((t_ui){0, 0, lx->width, lx->height, 0}, fill_img_color, "framework");
+		create_img((t_ui){lx->width, lx->height, 0}, fill_img_color, "framework");
 		register_img("./textures/rock.xpm");
 		register_img("./textures/fonts/monospace_ttf.xpm");
 		split_image("/monospace_ttf.xpm", "monospace_", 32, 0);
 	}
 }
+
 //Setup Exemple
 int	main(void)
 {
