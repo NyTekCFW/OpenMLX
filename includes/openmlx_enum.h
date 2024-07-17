@@ -6,12 +6,14 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 16:29:24 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/07 19:51:59 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/17 11:49:24 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef OPENMLX_ENUM_H
 # define OPENMLX_ENUM_H
+
+typedef struct ml_s	t_ml;
 
 enum e_ml_mode
 {

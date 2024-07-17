@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 13:23:13 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/07 19:56:19 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/17 12:43:03 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ml_settexture(t_prim *s, char *name);
 void	ml_setintensity(t_prim *s, float i);
 void	ml_setuv(t_prim *s, int uv);
 void	ml_setwrap(t_prim *s, int wrap);
-void	ml_savemesh(t_prim *s, t_shaders *sh);
+void	ml_savemesh(t_prim *s, char *sh);
 void	ml_overwrite(t_prim *s, int overwrite);
 void	ml_overwrite_fix(t_prim *s, t_vec4 *ijt);
 //display

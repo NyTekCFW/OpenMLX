@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/02 11:52:54 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/02 03:09:25 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/17 12:42:29 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,9 +92,12 @@ int	ml_can_draw(t_prim *s, t_vec2 xy)
 /// @brief set a shader where the current
 ///primitive will be saved in.
 /// @param s current primitive
-/// @param sh shader obtained via get_img("...")
-void	ml_savemesh(t_prim *s, t_shaders *sh)
+/// @param name name of the shader
+void	ml_savemesh(t_prim *s, char *name)
 {
+	t_shaders	*sh;
+
+	sh = get_img(name);
 	if (sh)
 		s->savemesh = &sh->img;
 }

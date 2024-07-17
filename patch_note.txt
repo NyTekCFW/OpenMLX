@@ -29,3 +29,45 @@ v1.1.2
 v1.1.3
 -Better organization of structures / prototype functions in .h files
 -removed x and y from t_ui structure
+
+v1.1.4
+-replaced (t_shaders *sh) to (char *name) on ml_savemesh function
+-removed flag -march=native of the makefile (can make random crash with valgrind)
+-better organization of .c files
+-Added hook functions _r = release _p = pressed _m = motion:
+	void	start_hook(void);
+	int	hook_keyboard_r(int ks, t_ml *lx);
+	int	hook_keyboard_p(int ks, t_ml *lx);
+	int	hook_mouse_p(int ks, int x, int y, t_ml *lx);
+	int	hook_mouse_r(int ks, int x, int y, t_ml *lx);
+	int	hook_mouse_m(int x, int y, t_ml *lx);
+	int	hook_render(t_ml *lx);
+	start_hook(); will launch all of them with t_ml* in arg
+-added key system handler:
+	-register a key:
+	lx->config.button[BUTTON_MOVE_FORWARD] = XK_w;
+	add_keycode(lx->config.button[BUTTON_MOVE_FORWARD], pmove_forward);
+	-execute key function:
+	into hook_render function add : execute_keyboard();
+	-detect if a specified key is pressed:
+	if (key_pressed(get_key(BUTTON_MOVE_FORWARD)->id)
+	...
+-added image brightness effect:
+	void	brightness_img(char *name, float i);
+	brightness_img("framework", 0.4f);
+	0.5f = normal, > 0.5f = Transition to white, < 0.5f = Transition to black
+-New export path: EXPORT_PATH = "./textures/export/"
+-Exported image format : image.ilx
+-Exported video format : video.vlx
+-Added char	*get_video_path(char *buffer, char *name);
+-Exported Video and exported image are now automatically stored into "./textures/export/"
+-void	init_record(char *name, char *track_img, int rate) -> init_record("gameplay", "framework", 1);
+-void	start_video(char *name, int rate); -> start_video("gameplay", 1);
+-Added char *xitoa(__int64_t nbr); (/!\ memory allocation, think about use a xfree after use)
+
+
+Ideas for a potential futur release:
+-raycasting code logic (for e.g all basic code for cub3d)
+-raytracing code logic (for e.g all basic code for minirt)
+-3d model build / rendering / export (.m3dlx)
+-Updater

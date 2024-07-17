@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 16:12:25 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/07 19:57:12 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/17 13:53:27 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,10 @@
 # include "openmlx_img.h"
 # include "openmlx_vertex.h"
 # include "openmlx_video.h"
-
+# include "openmlx_key.h"
+# include "openmlx_hook.h"
 # define PI 3.14159265359
+# define EXPORT_PATH "./textures/export/"
 
 typedef struct ml_s
 {
@@ -47,12 +49,14 @@ typedef struct ml_s
 	int			(*(make_window))();
 	int			width;
 	int			height;
-	int			debug;
+	int			quit;
 	int			refresh;
 	__uint32_t	purge_color;
 	t_texture	texture;
-	t_rec		record;
+	t_config	config;
 	t_video		video;
+	t_rec		record;
+	t_key		key[256];
 }	t_ml;
 
 t_ml	*gmlx(int e_gmlxact);

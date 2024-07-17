@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 19:38:54 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/07 19:08:18 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/17 12:43:24 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static void	register_mesh_img(t_vec2 max, t_vec2 min, t_prim *s, char *name)
 		sh = get_img(name);
 		if (sh)
 		{
-			ml_savemesh(s, sh);
+			ml_savemesh(s, name);
 			ml_overwrite(s, s->overwrite);
 			ml_end(s);
 		}

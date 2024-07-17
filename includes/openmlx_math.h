@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 16:51:42 by lchiva            #+#    #+#             */
-/*   Updated: 2024/06/19 15:31:24 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/17 08:54:47 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,6 @@ typedef struct vec2_s
 	int	x;
 	int	y;
 }	t_vec2;
-
-typedef struct vec2f_s
-{
-	double	x;
-	double	y;
-}	t_vec2f;
 
 typedef struct vec3_s
 {
@@ -39,6 +33,19 @@ typedef struct vec4_s
 	int	z;
 	int	w;
 }	t_vec4;
+
+typedef struct vec2f_s
+{
+	double	x;
+	double	y;
+}	t_vec2f;
+
+typedef struct vec3f_s
+{
+	double	x;
+	double	y;
+	double	z;
+}	t_vec3f;
 
 void		set_value(void *adr, __uint32_t val);
 __uint32_t	get_value(void *adr);
