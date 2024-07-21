@@ -26,35 +26,6 @@ void	register_images(void)
 	}
 }
 
-static void	rendering(t_ml *lx)
-{
-	if (lx)
-	{
-		fill_shader_color("clear_window", lx->purge_color);
-		cpicker_edit(&lx->purge_color);
-		if (lx->cpicker.is_open)
-		{
-			cpicker_show(lx, "clear_window");
-			print_img((t_vec2){0}, "clear_window");
-		}
-		else
-			lx->purge_window();
-	}
-}
-
-void	mouse_pressed(int ks, int x, int y, t_ml *lx)
-{
-	if (lx)
-	{
-		if (lx->cpicker.is_open && ks == XK_MOUSE_LEFT_CLICK)
-		{
-			set_keycode_status(ks, 0);
-			cpicker_check_cursor(lx, (t_vec2){x, y});
-			return ;
-		}
-	}
-}
-
 // Setup Exemple
 int	main(void)
 {
@@ -64,15 +35,9 @@ int	main(void)
 	if (lx)
 	{
 		lx->purge_color = 0x7f7f7f;
-		if (lx->set_win_size(400, 400) && lx->make_window("OpenMLX Showcase"))
+		if (lx->set_win_size(400, 400) && lx->make_window("OpenMLX Base"))
 		{
-			lx->render_callback = rendering;
-			lx->mouse_p_callback = mouse_pressed;
-			add_keycode(XK_MOUSE_LEFT_CLICK, NULL);
-			add_keycode(XK_p, cpicker_open);
 			register_images();
-			cpicker_init(lx);
-			cpicker_edit(&lx->purge_color);
 			start_hook();
 			lx->quit_window();
 		}
