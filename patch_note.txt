@@ -65,9 +65,27 @@ v1.1.4
 -void	start_video(char *name, int rate); -> start_video("gameplay", 1);
 -Added char *xitoa(__int64_t nbr); (/!\ memory allocation, think about use a xfree after use)
 
+v1.1.5
+-New SIMD optimization and fix
+-Added Color Picker (based on Immediate Mode GUI(imGUI))
+	look eg_main.c to see implementation
+-Fixed leak / segfault / invalid write - read error
+-Added Callback for hook (lx->render_callback)...
+	callback functions need to be setup like the hook with the same arguments
+	e.g : lx->render_callback = rendering; void rendering(t_ml *lx);
+-Fixed export_img, video export... (using an uninitialized value)
+-Added void	fill_shader_color(char *name, __uint32_t color)
+-Removed useless data in t_shaders
+	all old exported img will not work and will crash if you try to load it,
+	to fix it you need GHex(linux) or any other Hxd editor, open your .ilx image
+	remove the 8 next bytes at offset 0x4.
+-Added cpicker_bar.ilx cpicker_bkg.ilx cpicker_cursor.ilx textures in export folder.
+	do not remove it, this texture are here to make work properly the color picker.
+-Fixed record_logo.ilx textures
+-Added Exit Hook, u can close now the window without using ctrl + c
+
 
 Ideas for a potential futur release:
 -raycasting code logic (for e.g all basic code for cub3d)
 -raytracing code logic (for e.g all basic code for minirt)
 -3d model build / rendering / export (.m3dlx)
--Updater

@@ -56,5 +56,11 @@ but if you are sceptic you can remove the function that contain mlx_pixel_put.
 <img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/filled.png" alt="filled" width="20%">
 </div>
 
+## imGUI (POC)
+<div align="center">
+<img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/color_picker_p.png" alt="cpickerp" width="20%">
+<img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/color_picker_b.png" alt="cpickerb" width="20%">
+</div>
+
 
 
