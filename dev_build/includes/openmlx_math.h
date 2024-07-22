@@ -51,4 +51,9 @@ void		set_value(void *adr, __uint32_t val);
 __uint32_t	get_value(void *adr);
 float		dist(t_vec2f a, t_vec2f b);
 int			is_in_range(t_vec2 c, t_vec2 u, t_vec2 d);
+void		xsrand(__uint32_t seed);
+int			xrand(void);
+int			xrandint(int min, int max);
+int			xorrand(void);
+int			xorrandint(int min, int max);
 #endif
