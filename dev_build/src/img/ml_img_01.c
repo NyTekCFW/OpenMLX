@@ -6,11 +6,19 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 15:11:10 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/17 12:16:56 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/23 21:59:27 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/openmlx.h"
+
+/// @brief check if the current color is correct
+/// @param c color
+/// @return 
+int	is_valid_color(__uint32_t c)
+{
+	return ((c != 0 && c != 0xFF000000));
+}
 
 /// @brief check if background and foreground color is valid
 /// @param bkg color of the current pixel of the background

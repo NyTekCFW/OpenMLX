@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 06:34:12 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/17 09:30:36 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/25 23:08:14 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,6 @@ int			xstrcmp(const char *s1, const char *s2);
 __uint32_t	fnv1a_hash(const char *str);
 size_t		xstrlen(const char *str);
 char		*xitoa(__int64_t nbr);
+char		*va_hex(__int64_t v, __int64_t base);
+char		*va_float(float v, __uint32_t i);
 #endif

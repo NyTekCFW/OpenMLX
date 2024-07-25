@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 12:03:40 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/17 12:16:59 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/24 00:36:23 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,49 @@ void	blitting_render(t_vec2 xs, t_vec2 dim, char *name)
 	}
 }
 
-/// @brief check if the current color is correct
-/// @param c color
-/// @return 
-int	is_valid_color(__uint32_t c)
+/// @brief 
+static void	patch_img(t_ml *lx, t_shaders *sh, int width, int height)
 {
-	return ((c != 0 && c != 0xFF000000));
+	t_img	new;
+
+	new = (t_img){0};
+	new.ptr = mlx_new_image(lx->ptr, width, height);
+	if (new.ptr)
+	{
+		new.addr = mlx_get_data_addr(new.ptr, &new.bpp, &new.len, &new.endian);
+		if (new.addr)
+		{
+			new.width = width;
+			new.height = height;
+			new.size = new.height * new.len + new.width * (new.bpp / 8);
+			*(t_img *)&sh->img = *(t_img *)&new;
+			return ;
+		}
+		mlx_destroy_image(lx->ptr, new.ptr);
+	}
+	sh->file = 0;
+	sh->is_stored = 0;
+}
+
+/// @brief 
+/// @param name 
+/// @param width 
+/// @param height 
+void	resize_img(char *name, int width, int height)
+{
+	t_ml		*lx;
+	t_shaders	*sh;
+
+	if (width <= 0 || height <= 0)
+		return ;
+	lx = gmlx(ACT_GET);
+	sh = get_img(name);
+	if (lx && sh)
+	{
+		if (width != sh->img.width || height != sh->img.height)
+		{
+			mlx_destroy_image(lx->ptr, sh->img.ptr);
+			patch_img(lx, sh, width, height);
+		}
+	}
 }

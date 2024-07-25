@@ -6,11 +6,11 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 03:36:39 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/21 18:43:03 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/25 23:15:51 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/openmlx.h"
+#include "../../../includes/openmlx.h"
 
 static int	_min(int a, int b)
 {

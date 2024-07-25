@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 06:08:03 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/21 18:22:45 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/23 22:08:33 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void		register_img(char *path);
 void		register_exp_img(char *name);
 void		export_img(char *name);
 void		create_img(t_ui ui, void (*func)(), char *name);
+void		resize_img(char *name, int width, int height);
 void		print_img(t_vec2 pos, char *name);
 void		purge_textures(void);
 void		merge_img(t_shaders *d, t_shaders *b, t_vec2 u);

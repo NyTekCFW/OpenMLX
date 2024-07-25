@@ -6,11 +6,11 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 01:07:26 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/21 19:49:06 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/25 23:15:45 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/openmlx.h"
+#include "../../../includes/openmlx.h"
 
 void	cpicker_init(t_ml *lx)
 {

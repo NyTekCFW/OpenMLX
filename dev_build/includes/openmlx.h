@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 16:12:25 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/21 19:04:48 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/25 23:08:54 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@
 # include "openmlx_key.h"
 # include "openmlx_hook.h"
 # include "openmlx_cpicker.h"
+# include "openmlx_dmenu.h"
 # define PI 3.14159265359
 # define EXPORT_PATH "./textures/export/"
 

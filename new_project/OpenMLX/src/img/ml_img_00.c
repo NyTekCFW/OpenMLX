@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 08:34:10 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/21 17:39:47 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/25 23:06:12 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ __uint32_t	get_px_adr(t_img *img, t_vec2 xy)
 	int	x;
 	int	y;
 
+	if (img->width <= 0 || img->height <= 0)
+		return (0);
 	if (xy.x < 0)
 		xy.x *= -1;
 	if (xy.y < 0)

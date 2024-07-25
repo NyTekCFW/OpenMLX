@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/28 08:25:08 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/21 05:50:59 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/23 22:07:50 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ static int	purge_shader(t_ml *lx, t_shaders *prev, t_shaders *list)
 {
 	if (lx)
 	{
-		mlx_destroy_image(lx->ptr, list->img.ptr);
+		if (list->img.ptr)
+			mlx_destroy_image(lx->ptr, list->img.ptr);
 		if (lx->texture.shaders_count > 0)
 			lx->texture.shaders_count -= 1;
 		if (prev && prev->next)

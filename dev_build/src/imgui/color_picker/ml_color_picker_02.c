@@ -6,11 +6,11 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 04:11:26 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/21 18:43:10 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/25 23:15:55 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/openmlx.h"
+#include "../../../includes/openmlx.h"
 
 static int	_check(void)
 {

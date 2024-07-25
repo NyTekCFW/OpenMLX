@@ -91,3 +91,24 @@ v1.1.6
 	int			xrandint(int min, int max);
 	int			xorrand(void);
 	int			xorrandint(int min, int max);
+
+v1.1.7 (Final Update)
+-Added a Debug Menu (ImGui)
+-Possibility to resize a image with:
+	void	resize_img(char *name, int width, int height);
+-Possibility to print float value (/!\ memory allocation, think about use a xfree after use):
+	char	*va_float(float v, __uint32_t i); (i = precision ex : 4 = x.xxxx)
+-Added a way to print long value in hex / binary / decimal
+	char	*va_hex(__int64_t v, __int64_t base);//base = 2 | 10 | 16
+-Added linear_scaling
+	double	linear_scaling(double value, double min, double max, double w)
+-Added inverse_scaling
+	double	inverse_scaling(double position, double min, double max, double w)
+-Added a way to build a rectangle with primitive directly:
+	t_prim	ml_quad(t_vec2 origin, t_vec2 scale, __uint32_t color);
+-Added a way to build a triangle with primitive directly:
+	t_prim	ml_triangle(t_vec2 p1, t_vec2 p2, t_vec2 p3, __uint32_t color);
+	
+Futur Update :
+Coding everything myself has been an incredible experience. I've learned numerous methods to optimize, improve code, and convert data. However, after the 1.1.7 update, I don't foresee adding any major new features. I might explore ways to enhance the 3D aspects, but I want to start other projects. Any future updates will primarily focus on bug fixes or add some little functions.
+

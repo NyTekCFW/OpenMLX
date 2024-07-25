@@ -6,11 +6,11 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 17:41:47 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/21 18:43:24 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/25 23:15:58 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/openmlx.h"
+#include "../../../includes/openmlx.h"
 
 static void	_asm_cbar(t_shaders *sh, t_shaders *bar, t_vec4 u, __uint32_t *cl)
 {

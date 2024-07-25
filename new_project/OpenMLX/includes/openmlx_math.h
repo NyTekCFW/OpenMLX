@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 16:51:42 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/21 18:26:58 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/25 23:08:31 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,14 @@ typedef struct vec3f_s
 	double	z;
 }	t_vec3f;
 
+typedef struct vec4f_s
+{
+	float	x;
+	float	y;
+	float	z;
+	float	w;
+}	t_vec4f;
+
 void		set_value(void *adr, __uint32_t val);
 __uint32_t	get_value(void *adr);
 float		dist(t_vec2f a, t_vec2f b);
@@ -56,4 +64,6 @@ int			xrand(void);
 int			xrandint(int min, int max);
 int			xorrand(void);
 int			xorrandint(int min, int max);
+double		linear_scaling(double value, double min, double max, double w);
+double		inverse_scaling(double position, double min, double max, double w);
 #endif

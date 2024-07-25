@@ -6,7 +6,7 @@
 /*   By: lchiva <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 13:23:13 by lchiva            #+#    #+#             */
-/*   Updated: 2024/07/17 12:43:03 by lchiva           ###   ########.fr       */
+/*   Updated: 2024/07/25 23:09:58 by lchiva           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,7 @@ void	ml_draw_polygon(t_prim *s);
 //vertex and color check
 int		is_valid_color(__uint32_t c);
 int		ml_can_draw(t_prim *s, t_vec2 xy);
-
+//build form
+t_prim	ml_quad(t_vec2 origin, t_vec2 scale, __uint32_t color);
+t_prim	ml_triangle(t_vec2 p1, t_vec2 p2, t_vec2 p3, __uint32_t color);
 #endif
