@@ -11,8 +11,8 @@ OpenMLX is an extension of the minilibx graphics library that let you setup  mor
 Because some graphics features come from OpenGL or be inspired from this and this extension work only with minilibx.
 
 ### Warning
-This project is still a **WIP** (Work in progress), some bugs can still occur and i will correct all of them when i can.
-If you see a major bug or a minor bug you can still report it the only thing that i ask you before report it is to be sure the problem is not your functions.
+This project is finished since v1.1.7.
+If you see a major bug or a minor bug you can still report it the only thing that i ask you before report it is to be sure the problem is not your codes.
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/NyTekCFW/NyTekCFW/master/assets/line.png)
 
@@ -56,9 +56,9 @@ but if you are sceptic you can remove the function that contain mlx_pixel_put.
 <img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/filled.png" alt="filled" width="20%">
 </div>
 
-## imGUI (POC)
+## imGUI
 <div align="center">
 <img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/color_picker_p.png" alt="cpickerp" width="20%">
 <img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/color_picker_b.png" alt="cpickerb" width="20%">
-<img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/debugmenuimgui.png" alt="dbg_menu" width="20%">
+<img src="https://raw.githubusercontent.com/NyTekCFW/OpenMLX/master/assets/images/debugmenuimgui.png" alt="dbg_menu" height ="150%">
 </div>
